@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Học Lập Trình - Nguyễn Thế Phong</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="bai11.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-background">
+          <div class="header-content">
+            <div class="personal-info">
+              <div class="info-item">
+                <span class="info-label">Họ tên:</span>
+                <span class="info-value">Nguyễn Thế Phong</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Khoa:</span>
+                <span class="info-value">Công nghệ thông tin</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Lớp:</span>
+                <span class="info-value">CNTT1</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Khóa:</span>
+                <span class="info-value">K63</span>
+              </div>
+            </div>
+            <div class="search-section">
+              <input
+                type="text"
+                placeholder="Tìm kiếm..."
+                class="search-input"
+              />
+              <button class="search-btn">🔍</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="nav-content">
+          <ul class="nav-list">
+            <li><a href="#" onclick="showContent('home')">Trang chủ</a></li>
+            <li><a href="#" onclick="showContent('html')">HTML</a></li>
+            <li><a href="#" onclick="showContent('css')">CSS</a></li>
+            <li><a href="#" onclick="showContent('php')">PHP</a></li>
+            <li>
+              <a href="#" onclick="showContent('javascript')">JavaScript</a>
+            </li>
+            <li>
+              <a href="#" onclick="showContent('w3schools')">W3Schools</a>
+            </li>
+            <li>
+              <a href="#" onclick="showContent('hocwebchuan')">Hocwebchuan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="welcome-section">
+        <h1 class="welcome-title">
+          Chào mừng bạn đến với website tìm hiểu về lập trình web
+        </h1>
+      </div>
+
+      <div class="bodyContainer">
+        <div id="leftDrawer">
+          <div class="exercise-item">
+            <h3>Bài 1</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 2</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 3</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 4</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 5</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 6</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 7</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 8</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 9</h3>
+          </div>
+          <div class="exercise-item">
+            <h3>Bài 10</h3>
+          </div>
+          <div class="exercise-item" onclick="showExercise(11)">
+            <h3>Bài 11</h3>
+          </div>
+        </div>
+
+        <div id="rightDrawer">
+          <div class="content-header">
+            <div class="top-bar dark-blue">
+              <div class="left-section">
+                <span class="menu-icon">☰</span>
+                <span class="site-name">FREE UTS</span>
+              </div>
+              <div class="right-section">
+                <span class="search-icon">🔍</span>
+                <span class="menu-icon">☰</span>
+              </div>
+            </div>
+
+            <div class="nav-bar blue">
+              <ul class="nav-items">
+                <li class="active"><a href="#">Lập trình</a></li>
+                <li><a href="#">WordPress</a></li>
+                <li><a href="#">Hosting</a></li>
+                <li><a href="#">Thủ thuật</a></li>
+                <li><a href="#">Tin học</a></li>
+                <li><a href="#">Môn học</a></li>
+              </ul>
+            </div>
+
+            <div class="language-bar orange">
+              <div class="lang-buttons">
+                <button>C / C++</button>
+                <button>Giải thuật</button>
+                <button>HTML / CSS</button>
+                <button>Javascript</button>
+                <button>jQuery</button>
+                <button>Bootstrap</button>
+                <button class="active">PHP</button>
+                <button>Java</button>
+                <button>Python</button>
+                <button>C#</button>
+              </div>
+            </div>
+
+            <div class="breadcrumbs">
+              <span>Home > Web Backend > PHP</span>
+            </div>
+          </div>
+
+          <div class="main-content">
+            <div id="welcome-content">
+              <h1 class="main-title">Tự Học PHP</h1>
+              <p class="description">
+                Danh sách các bài viết trong chuyên mục Tự Học PHP, đây là những
+                bài viết mới nhất được cập nhật trong mục PHP.
+              </p>
+              <p class="content-text">
+                PHP là một ngôn ngữ lập trình phía Server dùng để xây dựng các
+                ứng dụng Website. Điểm mạnh của PHP là tính dễ học, dễ sử dụng,
+                có cộng đồng lớn và tài liệu phong phú. PHP được sử dụng rộng
+                rãi trong việc phát triển web, từ các website đơn giản đến các
+                ứng dụng web phức tạp.
+              </p>
+            </div>
+
+            <div
+              id="exercise-11"
+              class="login-register-container"
+              style="display: none"
+            >
+              <div class="form-container">
+                <div class="facebook-login-btn-container">
+                  <button class="facebook-login-btn">
+                    <span class="facebook-icon">f</span>
+                    Login with Facebook
+                  </button>
+                </div>
+
+                <div class="forms-wrapper">
+                  <div class="login-form">
+                    <h3 class="title-form">Login</h3>
+                    <form>
+                      <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          Remember Me
+                        </label>
+                      </div>
+                      <button type="submit" class="login-btn">Log In</button>
+                    </form>
+                  </div>
+
+                  <div class="register-form">
+                    <h3 class="title-form">Signup for New Account?</h3>
+                    <form>
+                      <div class="form-group">
+                        <label class="form-label">User Name</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">User Email *</label>
+                        <input type="email" class="form-input" required />
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group form-group-half-1">
+                          <label class="form-label">Select title</label>
+                          <select class="form-input">
+                            <option>Mr.</option>
+                            <option>Mrs.</option>
+                            <option>Ms.</option>
+                          </select>
+                        </div>
+                        <div class="form-group form-group-half-2">
+                          <label class="form-label"
+                            >Full name * BLOCK letters</label
+                          >
+                          <input type="text" class="form-input" required />
+                        </div>
+                      </div>
+
+                      <div class="company-section">
+                        <h3 class="section-title">Company details</h3>
+                        <p class="section-hint">
+                          Provide detail about your company
+                        </p>
+                        <div class="form-group">
+                          <label class="form-label">Company name</label>
+                          <input type="text" class="form-input" />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          I am agree with registration
+                        </label>
+                      </div>
+                      <button type="submit" class="register-btn">
+                        Register
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+
+            <iframe
+              id="exercise-frame"
+              style="display: none; width: 100%; height: 100%; border: none"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showContent(contentType) {
+        const welcomeContent = document.getElementById("welcome-content");
+        const exerciseFrame = document.getElementById("exercise-frame");
+        const exercise11 = document.getElementById("exercise-11");
+
+        welcomeContent.style.display = "block";
+        exerciseFrame.style.display = "none";
+        exercise11.style.display = "none";
+        exerciseFrame.src = "";
+
+        document.querySelectorAll(".exercise-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        const titleElement = document.querySelector(".welcome-title");
+        switch (contentType) {
+          case "home":
+            titleElement.textContent =
+              "Chào mừng bạn đến với website tìm hiểu về lập trình web";
+            break;
+          case "php":
+            titleElement.textContent = "PHP - Bài tập lập trình";
+            break;
+          case "html":
+            titleElement.textContent = "HTML - Ngôn ngữ đánh dấu siêu văn bản";
+            break;
+          case "css":
+            titleElement.textContent = "CSS - Cascading Style Sheets";
+            break;
+          case "javascript":
+            titleElement.textContent = "JavaScript - Ngôn ngữ lập trình web";
+            break;
+          case "w3schools":
+            titleElement.textContent = "W3Schools - Tài liệu học web";
+            break;
+          case "hocwebchuan":
+            titleElement.textContent = "Hocwebchuan - Học web chuẩn";
+            break;
+          default:
+            titleElement.textContent =
+              "Chào mừng bạn đến với website tìm hiểu về lập trình web";
+        }
+      }
+
+      function showExercise(exerciseNumber) {
+        const welcomeContent = document.getElementById("welcome-content");
+        const exerciseFrame = document.getElementById("exercise-frame");
+        const exercise11 = document.getElementById("exercise-11");
+
+        welcomeContent.style.display = "none";
+        exerciseFrame.style.display = "none";
+        exercise11.style.display = "none";
+
+        document.querySelectorAll(".exercise-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        event.currentTarget.classList.add("active");
+
+        if (exerciseNumber === 11) {
+          if (window.Bai11Functions && window.Bai11Functions.showExercise11) {
+            window.Bai11Functions.showExercise11();
+          } else {
+            exercise11.style.display = "block";
+          }
+        } else {
+          exerciseFrame.style.display = "block";
+          exerciseFrame.src = `bai${exerciseNumber}-cli.php`;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const exerciseItems = document.querySelectorAll(".exercise-item");
+        exerciseItems.forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            this.style.transform = "translateX(5px)";
+          });
+
+          item.addEventListener("mouseleave", function () {
+            this.style.transform = "translateX(0)";
+          });
+        });
+      });
+    </script>
+
+    <script src="bai11.js"></script>
+  </body>
+</html>
