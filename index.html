@@ -70,34 +70,34 @@
 
       <div class="bodyContainer">
         <div id="leftDrawer">
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(1)">
             <h3>Bài 1</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(2)">
             <h3>Bài 2</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(3)">
             <h3>Bài 3</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(4)">
             <h3>Bài 4</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(5)">
             <h3>Bài 5</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(6)">
             <h3>Bài 6</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(7)">
             <h3>Bài 7</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(8)">
             <h3>Bài 8</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(9)">
             <h3>Bài 9</h3>
           </div>
-          <div class="exercise-item">
+          <div class="exercise-item" onclick="showExercise(10)">
             <h3>Bài 10</h3>
           </div>
           <div class="exercise-item" onclick="showExercise(11)">
@@ -255,9 +255,32 @@
               <hr />
             </div>
 
+            <div
+              id="loading-spinner"
+              style="display: none; text-align: center; padding: 50px"
+            >
+              <div
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border: 4px solid #f3f3f3;
+                  border-top: 4px solid #3498db;
+                  border-radius: 50%;
+                  animation: spin 1s linear infinite;
+                  margin: 0 auto;
+                "
+              ></div>
+              <p style="margin-top: 20px; color: #666">Đang tải...</p>
+            </div>
             <iframe
               id="exercise-frame"
-              style="display: none; width: 100%; height: 100%; border: none"
+              style="
+                display: none;
+                width: 100%;
+                min-height: calc(100vh - 200px);
+                border: none;
+              "
+              onload="hideLoading()"
             ></iframe>
           </div>
         </div>
@@ -313,16 +336,21 @@
         const welcomeContent = document.getElementById("welcome-content");
         const exerciseFrame = document.getElementById("exercise-frame");
         const exercise11 = document.getElementById("exercise-11");
+        const loadingSpinner = document.getElementById("loading-spinner");
 
         welcomeContent.style.display = "none";
         exerciseFrame.style.display = "none";
         exercise11.style.display = "none";
+        loadingSpinner.style.display = "none";
 
         document.querySelectorAll(".exercise-item").forEach((item) => {
           item.classList.remove("active");
         });
 
-        event.currentTarget.classList.add("active");
+        const items = document.querySelectorAll("#leftDrawer .exercise-item");
+        if (items[exerciseNumber - 1]) {
+          items[exerciseNumber - 1].classList.add("active");
+        }
 
         if (exerciseNumber === 11) {
           if (window.Bai11Functions && window.Bai11Functions.showExercise11) {
@@ -331,9 +359,16 @@
             exercise11.style.display = "block";
           }
         } else {
-          exerciseFrame.style.display = "block";
-          exerciseFrame.src = `bai${exerciseNumber}-cli.php`;
+          loadingSpinner.style.display = "block";
+          exerciseFrame.src = `script/bai${exerciseNumber}-cli.php`;
         }
+      }
+
+      function hideLoading() {
+        const loadingSpinner = document.getElementById("loading-spinner");
+        const exerciseFrame = document.getElementById("exercise-frame");
+        loadingSpinner.style.display = "none";
+        exerciseFrame.style.display = "block";
       }
 
       document.addEventListener("DOMContentLoaded", function () {
